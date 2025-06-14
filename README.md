@@ -13,6 +13,10 @@ This project implements a program in C that constructs a binary tree (similar to
 - [Building and Running](#building-and-running)
 - [Memory Management](#memory-management)
 - [File Structure](#file-structure)
+- [Makefile Usage](#makefile-usage)
+- [Example Tasks](#example-tasks)
+- [Notes](#notes)
+- [Author](#author)
 
 ---
 
@@ -104,7 +108,7 @@ typedef struct Heap {
 
 ## Building and Running
 
-To compile and run the program:
+You can compile and run the program manually:
 
 ```sh
 gcc tema2.c -o tema2 -Wall -Wextra -g
@@ -125,8 +129,37 @@ Replace `-c1` with the desired task (`-c1`, `-c2`, `-c3`, `-c4`), and provide yo
 ## File Structure
 
 - **tema2.c**: Main source file containing all logic and function implementations.
+- **Makefile**: Automates building, cleaning, and running tasks.
 - **input.txt**: Input data file (format depends on the task).
 - **output.txt**: Output file for results.
+
+---
+
+## Makefile Usage
+
+The provided `Makefile` simplifies building and running the project. Common targets:
+
+- **Build the project:**
+  ```sh
+  make
+  ```
+- **Clean build files:**
+  ```sh
+  make clean
+  ```
+- **Run with Valgrind for each task:**
+  ```sh
+  make run_c1
+  make run_c2
+  make run_c3
+  make run_c4
+  ```
+- **Run all tests (if `run_tests.sh` exists):**
+  ```sh
+  make run
+  ```
+
+You can edit the `Makefile` to adjust file paths or add new tasks as needed.
 
 ---
 
@@ -148,4 +181,4 @@ Replace `-c1` with the desired task (`-c1`, `-c2`, `-c3`, `-c4`), and provide yo
 
 ## Author
 
-*Your Name Here*
+*Mihail Iazinschi*
